@@ -43,9 +43,9 @@ RUN wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo ap
 RUN sudo apt-get update > /dev/null
 RUN sudo apt-get install rabbitmq-server -y > /dev/null
 
-# ---MySQL---
-# Server installation
-RUN sudo apt-get install mysql-server -y > /dev/null
+# # ---MySQL---
+# # Server installation
+# RUN sudo apt-get install mysql-server -y > /dev/null
 # It is necessary to create a database named 'kagenda' and a new user 'khc' with all priviledges over this database.
 RUN cp /root/docker-res-files/init_db.sh /tmp/init_db.sh
 RUN sudo chmod +x /tmp/init_db.sh
