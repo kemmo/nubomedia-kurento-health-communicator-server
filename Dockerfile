@@ -20,13 +20,13 @@ RUN sudo apt-get install -y oracle-java8-installer > /dev/null
 ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
 
 # ---Maven---
-RUN sudo apt-get install maven -y > /dev/null
+# RUN sudo apt-get install maven -y > /dev/null
 
 # ---INSTALL GCM JAR IN LOCAL REPOSITORY---
-RUN mvn install:install-file -Dfile=/root/docker-res-files/gcm-server-4.jar -DpomFile=/root/docker-res-files/pom.xml
+# RUN mvn install:install-file -Dfile=/root/docker-res-files/gcm-server-4.jar -DpomFile=/root/docker-res-files/pom.xml
 
-WORKDIR /root
-RUN mvn clean install -DskipTests
+# WORKDIR /root
+# RUN mvn clean install -DskipTests
 WORKDIR /
 # --------------------------
 
@@ -94,7 +94,7 @@ RUN sudo service apache2 restart
 # ---KC Server---
 # Copy the kc.war file to Tomcat´s webapps directory.
 RUN ls /root/kc-server/communicator-rest/target/
-RUN sudo cp /root/kc-server/communicator-rest/target/communicator-rest-2.4.3-SNAPSHOT.war /opt/apache-tomcat-7.0.73/webapps/khcrest.war
+RUN sudo cp /root/kc-server/communicator-rest/communicator-rest-2.4.3-SNAPSHOT.war /opt/apache-tomcat-7.0.73/webapps/khcrest.war
 
 # Create '/etc/khc' directory.
 RUN sudo mkdir /etc/khc
