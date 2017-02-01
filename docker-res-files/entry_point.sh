@@ -26,8 +26,6 @@ done
 
 echo "Rabbitmq started!";
 
-sudo service mysql restart
-
 sudo service apache2 restart
 
 cd $TOMCAT_PATH/bin
