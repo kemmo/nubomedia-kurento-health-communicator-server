@@ -47,9 +47,9 @@ RUN sudo apt-get install rabbitmq-server -y > /dev/null
 # # Server installation
 RUN sudo apt-get install mysql-client -y > /dev/null
 # It is necessary to create a database named 'kagenda' and a new user 'khc' with all priviledges over this database.
-RUN cp /root/docker-res-files/init_db.sh /tmp/init_db.sh
-RUN sudo chmod +x /tmp/init_db.sh
-RUN sudo /tmp/init_db.sh
+# RUN cp /root/docker-res-files/init_db.sh /tmp/init_db.sh
+# RUN sudo chmod +x /tmp/init_db.sh
+# RUN sudo /tmp/init_db.sh
 
 # ---Tomcat 7.0.75--- 
 # Download the server distribution file and extract it over the desired directory.

@@ -46,7 +46,7 @@ done
 
 echo "Tomcat started!";
 
-mysql -u khc -pkhc kagenda <$RESOURCE_PATH/createdb.sql
+mysql -u $MYSQL_MYSQL_USER -h $MYSQL_HOST -p$MYSQL_MYSQL_PASSWORD $MYSQL_MYSQL_DATABASE <$RESOURCE_PATH/createdb.sql
 
 cd $KHC_PATH
 sed -i 's/hibernate.hbm2ddl.auto=update/hibernate.hbm2ddl.auto=validate/g' khc.properties
